@@ -210,7 +210,7 @@ class Lotto(private val numbers: List<Int>) {
 
 ## ✏️ 과제 진행 요구 사항
 
-- 미션은 [kotlin-lotto](https://github.com/woowacourse-precourse/kotlin-lotto) 저장소를 Fork & Clone해
+- 미션은 [kotlin-lotto](https://github.com/no1msh/precourse-study-subway-path) 저장소를 Fork & Clone해
   시작한다.
 - **기능을 구현하기 전 `docs/README.md`에 구현할 기능 목록을 정리**해 추가한다.
 - **Git의 커밋 단위는 앞 단계에서 `docs/README.md`에 정리한 기능 목록 단위**로 추가한다.
