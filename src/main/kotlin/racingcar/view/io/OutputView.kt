@@ -1,4 +1,11 @@
 package racingcar.view.io
 
-class OutputView {
+import racingcar.view.strings.Messages
+
+object OutputView {
+
+    fun printInputCarNames() {
+        println(Messages.InputCarNames)
+    }
+
 }
