@@ -8,4 +8,7 @@ object OutputView {
         println(Messages.InputCarNames)
     }
 
+    fun printInputTryCount() {
+        println(Messages.InputTryCount)
+    }
 }
