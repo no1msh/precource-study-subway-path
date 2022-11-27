@@ -11,4 +11,8 @@ object OutputView {
     fun printInputTryCount() {
         println(Messages.InputTryCount)
     }
+
+    fun printResult() {
+        println(Messages.GameResult)
+    }
 }
