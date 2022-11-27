@@ -20,4 +20,10 @@ object OutputView {
     fun printRacingLog(racingLog: RacingLog) {
         println(racingLog)
     }
+
+    fun printFinalWinner(names: List<String>) {
+        println(Messages.FinalWinner.message.format(
+            names.joinToString(", ")
+        ))
+    }
 }
