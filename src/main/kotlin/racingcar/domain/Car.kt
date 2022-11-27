@@ -15,6 +15,8 @@ class Car(private val name: String) {
         position += 1
     }
 
+    override fun toString(): String = "$name : ${(0..position).joinToString { "-" }}"
+
     companion object {
         const val NAME_LENGTH_MIN = 1
         const val NAME_LENGTH_MAX = 5
