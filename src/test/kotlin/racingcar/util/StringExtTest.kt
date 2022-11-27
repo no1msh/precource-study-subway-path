@@ -35,7 +35,7 @@ internal class StringExtTest {
     }
 
     @ParameterizedTest
-    @ValueSource(strings = ["테스트", "aㄱ", "a.b", "a b", "a-b", ""])
+    @ValueSource(strings = ["테스트", "aㄱ", "a.b", "a b", "a-b", "", " "])
     fun `isUpperOrLower_예외문자_false`(text: String) {
         assertThat(text.isUpperOrLower()).isEqualTo(false)
     }
