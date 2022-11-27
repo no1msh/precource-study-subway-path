@@ -1,6 +1,7 @@
 package racingcar.view.io
 
 import camp.nextstep.edu.missionutils.Console
+import racingcar.view.validator.InputValidator
 
 object InputView {
 
@@ -13,5 +14,9 @@ object InputView {
         InputValidator.checkCarNames(names)
 
         return names
+    }
+
+    fun readTryCount(): Int {
+        return InputValidator.validTryCount(Console.readLine())
     }
 }
