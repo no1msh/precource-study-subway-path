@@ -2,7 +2,7 @@ package racingcar.view.io
 
 import racingcar.view.strings.Messages
 
-object OutputView {
+class OutputView {
 
     fun printInputCarNames() {
         println(Messages.InputCarNames)
@@ -12,7 +12,8 @@ object OutputView {
         println(Messages.InputTryCount)
     }
 
-    fun printResult() {
+    fun printGameResult() {
         println(Messages.GameResult)
     }
+
 }
