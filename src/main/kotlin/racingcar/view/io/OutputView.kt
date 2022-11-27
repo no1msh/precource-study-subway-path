@@ -20,7 +20,7 @@ object OutputView {
     }
 
     fun printRacingLog(racingLog: RacingLog) {
-        println(racingLog)
+        println("$racingLog\n")
     }
 
     fun printFinalWinners(names: List<String>) {
