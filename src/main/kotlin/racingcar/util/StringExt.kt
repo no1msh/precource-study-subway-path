@@ -1,3 +1,3 @@
 package racingcar.util
 
-fun String.isTitleCase(): Boolean = all { it.isTitleCase() }
+fun String.isUpperOrLower(): Boolean = all { it.isUpperCase() || it.isLowerCase() }

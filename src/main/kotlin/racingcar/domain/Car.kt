@@ -1,6 +1,6 @@
 package racingcar.domain
 
-import racingcar.util.isTitleCase
+import racingcar.util.isUpperOrLower
 
 class Car(private val name: String) {
 
@@ -8,7 +8,7 @@ class Car(private val name: String) {
 
     init {
         require(name.length in NameLengthRange) { "name's length must be $NameLengthRange" }
-        require(name.isTitleCase()) { "name must be only upper/lower cases" }
+        require(name.isUpperOrLower()) { "name must be only upper/lower cases" }
     }
 
     companion object {
