@@ -1,8 +1,9 @@
 package racingcar.view.io
 
+import racingcar.domain.racing.RacingLog
 import racingcar.view.strings.Messages
 
-class OutputView {
+object OutputView {
 
     fun printInputCarNames() {
         println(Messages.InputCarNames)
@@ -16,4 +17,7 @@ class OutputView {
         println(Messages.GameResult)
     }
 
+    fun printRacingLog(racingLog: RacingLog) {
+        println(racingLog)
+    }
 }
