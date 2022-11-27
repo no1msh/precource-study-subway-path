@@ -7,4 +7,11 @@ class RacingTrack(
     private val judge: RandomMoveJudgement,
 ) {
 
+    fun moveCars() {
+        for (car in cars) {
+            if (judge.isMove()) {
+                car.move()
+            }
+        }
+    }
 }
