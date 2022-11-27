@@ -15,6 +15,10 @@ class RacingTrack(
         }
     }
 
+    fun getCurrentRacingLog(): RacingLog {
+        return RacingLog.newInstance(cars)
+    }
+
     companion object {
         const val CAR_SIZE_MAX = 20
         const val CAR_SIZE_MIN = 2
