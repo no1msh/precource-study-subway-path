@@ -15,6 +15,8 @@ class Car(private val name: String) : Comparable<Car> {
         position += 1
     }
 
+    fun getName(): String = name
+
     override fun compareTo(other: Car): Int = other.position - position
 
     override fun toString(): String = "$name : ${(0..position).joinToString { "-" }}"
