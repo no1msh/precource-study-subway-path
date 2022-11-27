@@ -23,7 +23,7 @@ object OutputView {
         println(racingLog)
     }
 
-    fun printFinalWinner(names: List<String>) {
+    fun printFinalWinners(names: List<String>) {
         println(Messages.FinalWinner.message.format(
             names.joinToString(", ")
         ))
