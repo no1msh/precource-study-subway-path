@@ -2,7 +2,7 @@ package racingcar.domain.racing
 
 import racingcar.util.isUpperOrLower
 
-class Car(private val name: String) {
+class Car(private val name: String) : Comparable<Car> {
 
     private var position: Int = 0
 
@@ -14,6 +14,8 @@ class Car(private val name: String) {
     fun move() {
         position += 1
     }
+
+    override fun compareTo(other: Car): Int = other.position - position
 
     override fun toString(): String = "$name : ${(0..position).joinToString { "-" }}"
 
