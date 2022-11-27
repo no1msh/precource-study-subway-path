@@ -1,5 +1,7 @@
 package racingcar
 
+import racingcar.domain.racing.RacingGame
+
 fun main() {
-    TODO("프로그램 구현")
+    RacingGame().play()
 }
