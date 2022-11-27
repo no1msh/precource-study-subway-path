@@ -19,7 +19,7 @@ class Car(private val name: String) : Comparable<Car> {
 
     override fun compareTo(other: Car): Int = position - other.position
 
-    override fun toString(): String = "$name : ${(0..position).joinToString { "-" }}"
+    override fun toString(): String = "$name : ${(0..position).joinToString(separator = "") { "-" }}"
 
     companion object {
         const val NAME_LENGTH_MIN = 1
