@@ -1,4 +1,4 @@
-package racingcar.domain
+package racingcar.domain.racing
 
 import org.junit.jupiter.api.assertThrows
 import org.junit.jupiter.params.ParameterizedTest
