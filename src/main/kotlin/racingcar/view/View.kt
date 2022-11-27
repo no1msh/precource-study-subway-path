@@ -1,5 +1,6 @@
 package racingcar.view
 
+import racingcar.domain.racing.RacingLog
 import racingcar.view.io.InputView
 import racingcar.view.io.OutputView
 
@@ -36,4 +37,9 @@ object View {
             }
         }
     }
+
+    fun printGameResult() {
+        OutputView.printGameResult()
+    }
+
 }
