@@ -22,7 +22,7 @@ internal class CarTest {
     }
 
     @ParameterizedTest
-    @ValueSource(strings = ["우아한", "프리코스", "pobi.", "car,", "de-jo"])
+    @ValueSource(strings = ["우아한", "프리코스", "pobi.", "car,", "de-jo", "po bi"])
     fun `자동차이름_대소문자X_에러`(name: String) {
         assertThrows<IllegalArgumentException> {
             Car(name)
