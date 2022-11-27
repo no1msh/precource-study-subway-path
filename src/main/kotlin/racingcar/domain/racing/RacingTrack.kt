@@ -1,6 +1,7 @@
 package racingcar.domain.racing
 
 import racingcar.domain.random.RandomMoveJudgement
+import racingcar.domain.random.RandomNumberGenerator
 
 class RacingTrack(
     private val cars: List<Car>,
@@ -24,5 +25,12 @@ class RacingTrack(
         const val CAR_SIZE_MIN = 2
 
         val AvailableCarSize = CAR_SIZE_MIN..CAR_SIZE_MAX
+
+        fun newInstance(carNames: List<String>): RacingTrack {
+            return RacingTrack(
+                cars = carNames.map { Car(it) },
+                judge = RandomMoveJudgement(RandomNumberGenerator())
+            )
+        }
     }
 }
