@@ -2,6 +2,7 @@ package racingcar.domain.racing
 
 import racingcar.domain.random.RandomMoveJudgement
 import racingcar.domain.random.RandomNumberGenerator
+import racingcar.util.maxAll
 
 class RacingTrack(
     private val cars: List<Car>,
@@ -18,6 +19,10 @@ class RacingTrack(
 
     fun getCurrentRacingLog(): RacingLog {
         return RacingLog.newInstance(cars)
+    }
+
+    fun getFinalWinners(): List<String> {
+        return cars.maxAll().map { it.getName() }
     }
 
     companion object {
