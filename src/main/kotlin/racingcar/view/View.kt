@@ -42,4 +42,11 @@ object View {
         OutputView.printGameResult()
     }
 
+    fun printRacingLog(log: RacingLog) {
+        OutputView.printRacingLog(log)
+    }
+
+    fun printFinalWinners(names: List<String>) {
+        OutputView.printFinalWinners(names)
+    }
 }
