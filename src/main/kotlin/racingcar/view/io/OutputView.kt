@@ -5,6 +5,8 @@ import racingcar.view.strings.Messages
 
 object OutputView {
 
+    private const val ERROR_PREFIX = "[ERROR]"
+
     fun printInputCarNames() {
         println(Messages.InputCarNames)
     }
@@ -25,5 +27,9 @@ object OutputView {
         println(Messages.FinalWinner.message.format(
             names.joinToString(", ")
         ))
+    }
+
+    fun printError(e: IllegalArgumentException) {
+        println("$ERROR_PREFIX ${e.message}")
     }
 }

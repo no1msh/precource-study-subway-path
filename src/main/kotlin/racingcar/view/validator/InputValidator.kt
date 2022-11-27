@@ -9,7 +9,7 @@ import racingcar.view.strings.ErrorMessages
 
 object InputValidator {
 
-    fun checkCarNames(names: List<String>) {
+    fun checkRacingCarNames(names: List<String>) {
         require(names.size in RacingTrack.AvailableCarSize) { ErrorMessages.OutOfCarSize }
         require(names.all { it.length in Car.AvailableNameLength }) { ErrorMessages.OutOfCarNameLength }
         require(names.all { it.isUpperOrLower() }) { ErrorMessages.InvalidCarName }

@@ -5,13 +5,13 @@ import racingcar.view.validator.InputValidator
 
 object InputView {
 
-    fun readCarNames(): List<String> {
+    fun readRacingCarNames(): List<String> {
         val names = Console.readLine()
             .split(",")
             .filter { it.isNotBlank() }
             .map { it.trim() }
 
-        InputValidator.checkCarNames(names)
+        InputValidator.checkRacingCarNames(names)
 
         return names
     }
