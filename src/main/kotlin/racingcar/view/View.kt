@@ -14,6 +14,15 @@ object View {
         )
     }
 
+    fun requestRacingTryCount(): Int {
+        OutputView.printInputTryCount()
+
+        return repeatIfThrows(
+            tryBlock = InputView::readTryCount,
+            catchBlock = OutputView::printError,
+        )
+    }
+
     private inline fun <reified T : Throwable, R> repeatIfThrows(
         tryBlock: () -> R,
         catchBlock: (T) -> Any,
