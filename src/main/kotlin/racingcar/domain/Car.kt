@@ -11,6 +11,10 @@ class Car(private val name: String) {
         require(name.isUpperOrLower()) { "name must be only upper/lower cases" }
     }
 
+    fun move() {
+        position += 1
+    }
+
     companion object {
         const val NAME_LENGTH_MIN = 1
         const val NAME_LENGTH_MAX = 5
