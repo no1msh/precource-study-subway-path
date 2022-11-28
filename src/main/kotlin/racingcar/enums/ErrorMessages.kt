@@ -6,5 +6,5 @@ enum class ErrorMessages(private val messages: String) {
     DISTINCT_EXCEPTION("중복이 있습니다."),
     DIGIT_EXCEPTION("숫자가 아닙니다.");
 
-    override fun toString(): String = messages
+    override fun toString(): String = "$PREFIX $messages"
 }
