@@ -10,7 +10,7 @@ class OutputView {
 
     fun printResult() = println(GameMessages.RESULT.toString())
 
-    fun printWinner() {
-
+    fun printWinner(winners: List<String>) {
+        println(winners.joinToString(", ", GameMessages.WINNER.toString()))
     }
 }
