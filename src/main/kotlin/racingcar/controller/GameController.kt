@@ -21,6 +21,7 @@ class GameController {
 
     private fun gameStart(cars: List<Car>): List<Car> {
         val playCount = view.startView()
+        view.resultView()
         for (i in 0 until playCount) {
             carService.driving(cars)
             println()
