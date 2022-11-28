@@ -23,4 +23,21 @@ class InputView {
             ErrorMessages.DISTINCT_EXCEPTION.toString()
         }
     }
+
+    tailrec fun readPlayCount(): Int {
+        val playCount = Console.readLine().trim()
+        return try {
+            validatePlayCount(playCount)
+            playCount.toInt()
+        } catch (e: IllegalArgumentException) {
+            println(e.message)
+            readPlayCount()
+        }
+    }
+
+    private fun validatePlayCount(playCount: String) {
+        require(playCount.all { it.isDigit() }){
+            ErrorMessages.DIGIT_EXCEPTION.toString()
+        }
+    }
 }
