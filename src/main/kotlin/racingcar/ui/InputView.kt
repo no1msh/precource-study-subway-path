@@ -4,7 +4,8 @@ import camp.nextstep.edu.missionutils.Console
 import racingcar.enums.ErrorMessages
 
 class InputView {
-    tailrec fun readCarName(): List<String> {
+
+    fun readCarName(): List<String> {
         val carNames = Console.readLine().trim().split(",")
         return try {
             validateCarNames(carNames)
@@ -24,7 +25,7 @@ class InputView {
         }
     }
 
-    tailrec fun readPlayCount(): Int {
+    fun readPlayCount(): Int {
         val playCount = Console.readLine().trim()
         return try {
             validatePlayCount(playCount)
