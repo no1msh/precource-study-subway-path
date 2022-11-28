@@ -12,7 +12,7 @@ class Car(private val name: String) {
     fun getPosition(): Int = position
 
     fun drive() {
-        val randomNumber = pickNumber()[0]
+        val randomNumber = pickNumber()
         if (randomNumber >= CONDITION) {
             position += 1
         }
@@ -28,14 +28,11 @@ class Car(private val name: String) {
         println("$name : $distance")
     }
 
-    fun pickNumber(): List<Int> {
-        return Randoms.pickUniqueNumbersInRange(START_NUMBER, END_NUMBER, COUNT)
-    }
+    fun pickNumber(): Int = Randoms.pickNumberInRange(START_NUMBER, END_NUMBER)
 
     companion object {
         private const val START_NUMBER = 0
         private const val END_NUMBER = 9
-        private const val COUNT = 1
         private const val CONDITION = 4
     }
 }
