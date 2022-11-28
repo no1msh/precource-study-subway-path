@@ -6,15 +6,15 @@ class View {
 
     fun initView(): List<String> {
         outputView.printInit()
-        return inputView.readCarName()
+        return inputView.retryReadCarName()
     }
 
     fun startView(): Int {
         outputView.printPlayCount()
-        return inputView.readPlayCount()
+        return inputView.retryReadPlayCount()
     }
 
     fun endView(winners: List<String>) {
-        println("${outputView.printWinner()} ${winners.joinToString { ", " }}")
+        outputView.printWinner(winners)
     }
 }
