@@ -17,25 +17,4 @@ class CarService {
             car.printResult()
         }
     }
-
-    fun compare(cars: List<Car>): MutableList<String> {
-        val sortedCars = sortByPosition(cars)
-        val result: MutableList<String> = mutableListOf()
-        val winnerCondition = sortedCars[0].second
-        sortedCars.forEach {
-            if (it.second == winnerCondition) {
-                result.add(it.first)
-            }
-        }
-        return result
-    }
-
-    private fun sortByPosition(cars: List<Car>): MutableList<Pair<String, Int>> {
-        val sortedCars: MutableList<Pair<String, Int>> = mutableListOf()
-        for (car in cars) {
-            sortedCars.add(car.getName() to car.getPosition())
-        }
-        sortedCars.sortByDescending { it.second }
-        return sortedCars
-    }
 }
