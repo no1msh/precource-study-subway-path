@@ -5,11 +5,14 @@ import camp.nextstep.edu.missionutils.Console.readLine
 class InputView {
     private val exception = Exceptions()
 
-    fun getCarNames() {
+    fun getCarNames(): List<String> {
+        var cars: List<String>
         do {
             val input = readLine()
-            val cars = input.split(",")
+            input.replace(" ","")
+            cars = input.split(",")
         } while (exception.validateInputNames(cars))
+        return cars
     }
 
 }
