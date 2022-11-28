@@ -30,7 +30,7 @@ class GameController {
     }
 
     private fun gameEnd(cars: List<Car>) {
-        val winners = carService.compare(cars)
+        val winners = Car.compare(cars)
         view.endView(winners)
     }
 }
