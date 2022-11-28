@@ -15,4 +15,12 @@ class InputView {
         return cars
     }
 
+    fun getGameCount(): Int {
+        var input: String
+        do {
+            input = readLine()
+        } while (exception.validateGameCount(input))
+        return input.toInt()
+    }
+
 }

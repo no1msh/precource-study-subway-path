@@ -28,4 +28,34 @@ class Exceptions {
         }
         return false
     }
+
+    fun validateGameCount(input: String): Boolean {
+        if (validateInputNumber(input))
+            return true
+        if (validateRangeNumber(input.toInt()))
+            return true
+        return false
+    }
+
+    private fun validateInputNumber(input: String) :Boolean {
+        val num = input.toIntOrNull()
+        try {
+            require(num != null)
+        } catch (e: NumberFormatException) {
+            outputView.printInputNumberError()
+            return true
+        }
+        return false
+    }
+
+    private fun validateRangeNumber(input: Int) :Boolean {
+        try {
+            require(input > 0)
+        } catch (e: IllegalArgumentException) {
+            outputView.printInputRangeError()
+            return true
+        }
+        return false
+    }
+
 }

@@ -6,7 +6,7 @@ class RacingGame {
 
     fun start() {
         val cars = getCarNames()
-        println(cars)
+        val gameCount = getGameCount()
     }
 
     private fun getCarNames(): List<Car> {
@@ -22,4 +22,10 @@ class RacingGame {
         }
         return cars
     }
+
+    private fun getGameCount(): Int {
+        outputView.printRequestGameCount()
+        return inputView.getGameCount()
+    }
+
 }
