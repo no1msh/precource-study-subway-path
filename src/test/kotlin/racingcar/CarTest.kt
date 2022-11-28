@@ -14,4 +14,10 @@ internal class CarTest {
             car.printResult()
         }
     }
+
+    @Test
+    fun `랜덤 숫자 생성 테스트`() {
+        val car = Car("test")
+        val number = car.pickNumber().also { println(it) }
+    }
 }

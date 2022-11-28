@@ -7,32 +7,15 @@ class Car(private val name: String) {
     private var position: Int = 0
 
     // 추가 기능 구현부
+    fun getName(): String = name
+
+    fun getPosition(): Int = position
+
     fun drive() {
-        val randomNumber = pickNumber()
+        val randomNumber = pickNumber()[0]
         if (randomNumber >= CONDITION) {
             position += 1
         }
-    }
-
-    fun compare(vararg cars: Car): MutableList<String> {
-        val sortedCars = sortByPosition(*cars)
-        val result: MutableList<String> = mutableListOf()
-        val winnerCondition = sortedCars[0].second
-        sortedCars.forEach {
-            if (it.second == winnerCondition) {
-                result.add(it.first)
-            }
-        }
-        return result
-    }
-
-    private fun sortByPosition(vararg cars: Car): MutableList<Pair<String, Int>> {
-        val sortedCars: MutableList<Pair<String, Int>> = mutableListOf()
-        for (car in cars) {
-            sortedCars.add(car.name to car.position)
-        }
-        sortedCars.sortByDescending { it.second }
-        return sortedCars
     }
 
     fun printPosition() = println("position: $position")
@@ -45,7 +28,9 @@ class Car(private val name: String) {
         println("$name : $distance")
     }
 
-    private fun pickNumber(): Int = Randoms.pickUniqueNumbersInRange(START_NUMBER, END_NUMBER, COUNT).last()
+    fun pickNumber(): List<Int> {
+        return Randoms.pickUniqueNumbersInRange(START_NUMBER, END_NUMBER, COUNT)
+    }
 
     companion object {
         private const val START_NUMBER = 0

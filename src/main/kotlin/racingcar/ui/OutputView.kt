@@ -4,7 +4,13 @@ import racingcar.enums.GameMessages
 
 class OutputView {
 
-    fun printStart() = println(GameMessages.START.toString())
+    fun printInit() = println(GameMessages.START.toString())
 
+    fun printPlayCount() = println(GameMessages.PLAY_COUNT.toString())
 
+    fun printResult() = println(GameMessages.RESULT.toString())
+
+    fun printWinner() {
+
+    }
 }
