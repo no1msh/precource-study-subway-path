@@ -1,6 +1,7 @@
 package racingcar.IO
 
 import camp.nextstep.edu.missionutils.Console
+import racingcar.errorcheck.ErrorCheck
 
 object RacingInput {
     fun inputCar(): String {
@@ -8,8 +9,8 @@ object RacingInput {
         var cars = ""
         while (!check) {
             try {
-                val cars = Console.readLine()
-                //에러체크
+                cars = Console.readLine()
+                ErrorCheck.carListCheck(cars)
                 check = true
             } catch (error: IllegalArgumentException) {
                 println(error.message)
