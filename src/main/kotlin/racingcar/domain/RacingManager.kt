@@ -3,6 +3,7 @@ package racingcar.domain
 import racingcar.Car
 import racingcar.IO.RacingInput
 import racingcar.IO.RacingOutput
+import racingcar.RacingParameter
 import racingcar.calculate.RacingCalculator
 import kotlin.properties.Delegates
 
@@ -32,7 +33,12 @@ object RacingManager {
     }
 
     private fun startRacing() {
-
+        for(count:Int in RacingParameter.START_COUNT.number .. progressCount){
+            for(number:Int in carList.indices){
+                carList[number].doIMoving()
+            }
+            //output으로 결과 출력.
+        }
     }
 
     private fun printResult() {
