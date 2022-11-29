@@ -3,7 +3,8 @@ package racingcar
 enum class RacingParameter(val number: Int) {
     START_COUNT(0),
     CAR_NAME_LENGTH_MINIMUN(1),
-    CAR_NAME_LENGTH_MAXTIMUN(5)
+    CAR_NAME_LENGTH_MAXTIMUN(5),
+    CAR_MOVING_MINIMUM_NUMBER(4)
     ;
 
 
