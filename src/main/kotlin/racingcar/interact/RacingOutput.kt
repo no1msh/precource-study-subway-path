@@ -18,7 +18,7 @@ object RacingOutput {
         for(count : Int in cars.indices){
             println(cars[count].getName()+RacingCalculator.carProgress(cars[count].getProgress()))
         }
-
+        println(RacingMessage.EMPTY)
     }
 
 
