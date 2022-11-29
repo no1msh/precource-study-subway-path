@@ -1,12 +1,12 @@
 package racingcar.domain
 
+import racingcar.Car
 import racingcar.IO.RacingInput
 import racingcar.IO.RacingOutput
 import racingcar.calculate.RacingCalculater
 
 object RacingManager {
-    lateinit var carList: List<String>
-    lateinit var carProgress: MutableList<Int>
+    lateinit var carList: MutableList<Car>
 
     fun gameStart() {
         getCars()
@@ -16,15 +16,13 @@ object RacingManager {
     private fun getCars() {
         RacingOutput.giveMeCars()
         val cars = RacingInput.inputCar()
-        carList = RacingCalculater.splitCarList(cars)
-        makeCarProgress()
+        carList = makeCarProgress(RacingCalculater.splitCarList(cars))
     }
 
-    private fun makeCarProgress() {
-        carProgress=RacingCalculater.makeInitProgressList(carList)
-    }
+    private fun makeCarProgress(cars: List<String>): MutableList<Car> = RacingCalculater.makeInitProgressList(cars)
 
-    private fun getCount(){
+
+    private fun getCount() {
 
     }
 
