@@ -1,5 +1,7 @@
 package racingcar
 
+import camp.nextstep.edu.missionutils.Randoms.pickUniqueNumbersInRange
+
 class RacingGame {
     private val inputView = InputView()
     private val outputView = OutputView()
@@ -7,6 +9,24 @@ class RacingGame {
     fun start() {
         val cars = getCarNames()
         val gameCount = getGameCount()
+        playGame(cars, gameCount)
+    }
+
+    private fun playGame(cars: List<Car>, gameCount: Int) {
+        outputView.printResultMessage()
+        for (i in 0 until gameCount) {
+            moveCars(cars)
+        }
+    }
+
+    private fun moveCars(cars: List<Car>) {
+        val n = cars.size
+        val random = pickUniqueNumbersInRange(0, 9, n)
+        for (i in 0 until n) {
+            if (random[i] >= 4) {
+                cars[i].move()
+            }
+        }
     }
 
     private fun getCarNames(): List<Car> {
