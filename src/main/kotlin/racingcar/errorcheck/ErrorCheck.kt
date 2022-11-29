@@ -15,4 +15,8 @@ object ErrorCheck {
         require(number.toIntOrNull() != null) { RacingMessage.ERROR_COUNT_IS_NOT_NUMBER }
     }
 
+    fun carNameDuplicateCheck(cars:List<String>){
+        require(cars==cars.distinct()){ RacingMessage.ERROR_CAR_NAME_MUST_UNIQUE }
+    }
+
 }
