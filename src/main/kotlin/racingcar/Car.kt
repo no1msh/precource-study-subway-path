@@ -12,4 +12,6 @@ class Car(private val name: String) {
         if(RacingCalculator.carMoving())
             position++
     }
+
+    fun printProgress():String = name + RacingCalculator.carProgress(position)
 }

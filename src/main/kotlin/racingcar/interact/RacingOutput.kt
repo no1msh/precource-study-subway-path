@@ -2,6 +2,7 @@ package racingcar.interact
 
 import racingcar.Car
 import racingcar.RacingMessage
+import racingcar.RacingParameter
 import racingcar.calculate.RacingCalculator
 
 object RacingOutput {
@@ -16,10 +17,15 @@ object RacingOutput {
 
     fun printRacing(cars : MutableList<Car>){
         for(count : Int in cars.indices){
-            println(cars[count].getName()+RacingCalculator.carProgress(cars[count].getProgress()))
+            println(cars[count].printProgress())
         }
         println(RacingMessage.EMPTY)
     }
 
+    fun printwinner(cars : MutableList<Car>){
+        val winners = mutableListOf<Car>()
+        winners.add(cars[RacingParameter.START_COUNT.number])
+
+    }
 
 }
