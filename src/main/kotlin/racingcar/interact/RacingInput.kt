@@ -10,6 +10,7 @@ object RacingInput {
         while (!check) {
             try {
                 cars = Console.readLine()
+                cars = cars.replace(" ","")
                 ErrorCheck.carListCheck(cars)
                 check = true
             } catch (error: IllegalArgumentException) {
