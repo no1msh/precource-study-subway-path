@@ -7,8 +7,7 @@ enum class RacingParameter(val number: Int) {
     CAR_MOVING_MINIMUM_NUMBER(4),
     RANDOM_NUMBER_MINIMUM(1),
     RANDOM_NUMBER_MAXIMUM(9),
-    HOW_MANY_GET_NUMBERS(1),
-    GET_RACE_WINNER_START(0)
+    GET_RACE_WINNER_START(1)
     ;
 
 

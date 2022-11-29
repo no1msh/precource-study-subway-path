@@ -32,6 +32,7 @@ object RacingCalculator {
             if (winners[RacingParameter.START_COUNT.number].getProgress() < cars[count].getProgress()) {
                 winners.clear()
                 winners.add(cars[count])
+                continue
             }
             if (winners[RacingParameter.START_COUNT.number].getProgress() == cars[count].getProgress())
                 winners.add(cars[count])
