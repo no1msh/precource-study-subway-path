@@ -8,8 +8,8 @@ class InputView {
     fun getCarNames(): List<String> {
         var cars: List<String>
         do {
-            val input = readLine()
-            input.replace(" ","")
+            var input = readLine()
+            input = input.replace(" ","")
             cars = input.split(",")
         } while (exception.validateInputNames(cars))
         return cars
