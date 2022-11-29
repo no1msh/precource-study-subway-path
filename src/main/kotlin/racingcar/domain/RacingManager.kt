@@ -33,8 +33,9 @@ object RacingManager {
     }
 
     private fun startRacing() {
-        for(count:Int in RacingParameter.START_COUNT.number .. progressCount){
-            for(number:Int in carList.indices){
+        RacingOutput.printProgressMessage()
+        for (count: Int in RacingParameter.START_COUNT.number until progressCount) {
+            for (number: Int in carList.indices) {
                 carList[number].doIMoving()
             }
             RacingOutput.printRacing(carList)
@@ -42,7 +43,7 @@ object RacingManager {
     }
 
     private fun printResult() {
-
+        RacingOutput.printwinner(RacingCalculator.getWinner(carList))
     }
 
 }
