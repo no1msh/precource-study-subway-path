@@ -8,4 +8,7 @@ class Car(private val name: String) {
         position += 1
     }
 
+    fun result(): String {
+        return name + " : "+ repeat(position){"-"}
+    }
 }

@@ -16,6 +16,7 @@ class RacingGame {
         outputView.printResultMessage()
         for (i in 0 until gameCount) {
             moveCars(cars)
+            outputView.printResultCars(cars)
         }
     }
 
