@@ -24,5 +24,8 @@ object RacingManager {
         carProgress=RacingCalculater.makeInitProgressList(carList)
     }
 
+    private fun getCount(){
+
+    }
 
 }
