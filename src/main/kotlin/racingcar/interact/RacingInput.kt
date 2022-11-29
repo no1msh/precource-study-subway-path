@@ -23,7 +23,7 @@ object RacingInput {
         var cars: String = Console.readLine()
         cars = cars.replace(RacingMessage.SPACE.toString(),RacingMessage.EMPTY.toString())
         ErrorCheck.carListCheck(cars)
-        ErrorCheck.carNameDuplicateCheck(cars.split(RacingMessage.SPLIT.toString()))
+        ErrorCheck.carNameDuplicateCheck(cars.split(RacingMessage.SPLIT_NO_SPACE.toString()))
         return cars
     }
 

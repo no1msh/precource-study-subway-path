@@ -7,7 +7,7 @@ import racingcar.RacingMessage
 
 object RacingCalculator {
 
-    fun splitCarList(cars: String): List<String> = cars.split(",")
+    fun splitCarList(cars: String): List<String> = cars.split(RacingMessage.SPLIT_NO_SPACE.toString())
     fun makeInitProgressList(cars: List<String>): MutableList<Car> {
         val carProgress = mutableListOf<Car>()
         for (count: Int in RacingParameter.START_COUNT.number until cars.size)

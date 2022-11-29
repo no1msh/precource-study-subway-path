@@ -23,6 +23,7 @@ enum class RacingMessage(private val message: String) {
     RESULT_ON_THE_WAY("실행 결과"),
     RESULT_WINNER("최종 우승자 : "),
     SPLIT(", "),
+    SPLIT_NO_SPACE(","),
     ERROR_NAME_LENGTH("[ERROR] 차의 이름은 1~5자 사이여야합니다. 다시 입력하세요."),
     ERROR_COUNT_IS_NOT_NUMBER("[ERROR] 시도 횟수는 숫자여야 합니다. 다시 입력하세요."),
     ERROR_CAR_NAME_MUST_UNIQUE("[ERROR] 차의 이름은 서로 달라야합니다. 다시 입력하세요.")

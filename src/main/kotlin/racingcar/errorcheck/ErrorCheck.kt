@@ -5,7 +5,7 @@ import racingcar.RacingParameter
 
 object ErrorCheck {
     fun carListCheck(cars: String) {
-        val carList = cars.split(",")
+        val carList = cars.split(RacingMessage.SPLIT_NO_SPACE.toString())
         for (count: Int in carList.indices) {
             require(carList[count].length in RacingParameter.CAR_NAME_LENGTH_MINIMUM.number..RacingParameter.CAR_NAME_LENGTH_MAXIMUM.number) { RacingMessage.ERROR_NAME_LENGTH }
         }
