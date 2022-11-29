@@ -3,7 +3,7 @@ package racingcar.domain
 import racingcar.Car
 import racingcar.IO.RacingInput
 import racingcar.IO.RacingOutput
-import racingcar.calculate.RacingCalculater
+import racingcar.calculate.RacingCalculator
 import kotlin.properties.Delegates
 
 object RacingManager {
@@ -20,10 +20,10 @@ object RacingManager {
     private fun getCars() {
         RacingOutput.giveMeCars()
         val cars = RacingInput.inputCar()
-        carList = makeCarProgress(RacingCalculater.splitCarList(cars))
+        carList = makeCarProgress(RacingCalculator.splitCarList(cars))
     }
 
-    private fun makeCarProgress(cars: List<String>): MutableList<Car> = RacingCalculater.makeInitProgressList(cars)
+    private fun makeCarProgress(cars: List<String>): MutableList<Car> = RacingCalculator.makeInitProgressList(cars)
 
 
     private fun getCount() {
@@ -31,11 +31,11 @@ object RacingManager {
         progressCount = RacingInput.getCount()
     }
 
-    private fun startRacing(){
+    private fun startRacing() {
 
     }
 
-    private fun printResult(){
+    private fun printResult() {
 
     }
 
