@@ -18,7 +18,7 @@ object RacingCalculator {
     fun carMoving(): Boolean {
         val randomNumber = Randoms.pickUniqueNumbersInRange(
             RacingParameter.RANDOM_NUMBER_MINIMUM.number,
-            RacingParameter.RANDOM_NUMBER_MAXIMUN.number,
+            RacingParameter.RANDOM_NUMBER_MAXIMUM.number,
             RacingParameter.HOW_MANY_GET_NUMBERS.number
         )
         return randomNumber[RacingParameter.START_COUNT.number] > RacingParameter.CAR_MOVING_MINIMUM_NUMBER.number
