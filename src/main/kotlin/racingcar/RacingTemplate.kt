@@ -4,11 +4,12 @@ enum class RacingParameter(val number: Int) {
     START_COUNT(0),
     CAR_NAME_LENGTH_MINIMUN(1),
     CAR_NAME_LENGTH_MAXTIMUN(5)
-;
+    ;
 
 
 }
-enum class RacingMessage(private val message:String){
+
+enum class RacingMessage(private val message: String) {
     EMPTY(""),
     GIVE_ME_CAR_LIST("경주할 자동차 이름을 입력하세요.(이름은 쉼표(,) 기준으로 구분)"),
     HOW_MANY_COUNT("시도할 회수는 몇회인가요?"),
@@ -20,5 +21,5 @@ enum class RacingMessage(private val message:String){
 
     ;
 
-    override fun toString(): String =message
+    override fun toString(): String = message
 }

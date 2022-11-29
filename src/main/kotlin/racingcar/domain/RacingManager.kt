@@ -1,11 +1,18 @@
 package racingcar.domain
 
+import racingcar.IO.RacingInput
+import racingcar.IO.RacingOutput
+
 object RacingManager {
 
-    fun gamestart(){
+    fun gameStart() {
 
     }
 
+    fun getCars() {
+        RacingOutput.giveMeCars()
+        val cars = RacingInput.inputCar()
+    }
 
 
 }
