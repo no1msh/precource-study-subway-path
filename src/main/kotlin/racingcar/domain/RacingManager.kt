@@ -27,7 +27,7 @@ object RacingManager {
 
     private fun getCount() {
         RacingOutput.giveMeCount()
-        progressCount=RacingInput.getCount()
+        progressCount = RacingInput.getCount()
     }
 
 }
