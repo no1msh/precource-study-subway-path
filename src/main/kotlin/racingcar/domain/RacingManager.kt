@@ -4,12 +4,15 @@ import racingcar.Car
 import racingcar.IO.RacingInput
 import racingcar.IO.RacingOutput
 import racingcar.calculate.RacingCalculater
+import kotlin.properties.Delegates
 
 object RacingManager {
     lateinit var carList: MutableList<Car>
+    var progressCount by Delegates.notNull<Int>()
 
     fun gameStart() {
         getCars()
+        getCount()
 
     }
 
@@ -23,7 +26,8 @@ object RacingManager {
 
 
     private fun getCount() {
-
+        RacingOutput.giveMeCount()
+        progressCount=RacingInput.getCount()
     }
 
 }

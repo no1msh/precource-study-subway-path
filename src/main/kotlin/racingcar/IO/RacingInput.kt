@@ -19,5 +19,11 @@ object RacingInput {
         return cars
     }
 
+    fun getCount():Int{
+        val count = Console.readLine()
+        //예외처리
+        return count.toInt()
+    }
+
 
 }
