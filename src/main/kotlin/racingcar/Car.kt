@@ -1,12 +1,15 @@
 package racingcar
 
+import racingcar.calculate.RacingCalculator
+
 class Car(private val name: String) {
 
     private var position: Int = 0
 
     fun getName(): String = name
-    fun getProgree(): Int = position
+    fun getProgress(): Int = position
     fun doIMoving() {
-
+        if(RacingCalculator.carMoving())
+            position++
     }
 }
