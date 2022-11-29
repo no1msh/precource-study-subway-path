@@ -15,14 +15,7 @@ object RacingCalculator {
         return carProgress
     }
 
-    fun carMoving(): Boolean {
-        val randomNumber = Randoms.pickUniqueNumbersInRange(
-            RacingParameter.RANDOM_NUMBER_MINIMUM.number,
-            RacingParameter.RANDOM_NUMBER_MAXIMUM.number,
-            RacingParameter.HOW_MANY_GET_NUMBERS.number
-        )
-        return randomNumber[RacingParameter.START_COUNT.number] > RacingParameter.CAR_MOVING_MINIMUM_NUMBER.number
-    }
+    fun progressRandom(cars: MutableList<Car>) : List<Int> = Randoms.pickUniqueNumbersInRange(RacingParameter.RANDOM_NUMBER_MINIMUM.number,RacingParameter.RANDOM_NUMBER_MAXIMUM.number,cars.size)
 
     fun carProgress(position: Int): String {
         var progress = RacingMessage.RACING_PROGRESS_STANDARD.toString()

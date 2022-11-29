@@ -8,8 +8,9 @@ class Car(private val name: String) {
 
     fun getName(): String = name
     fun getProgress(): Int = position
-    fun doIMoving() {
-        if(RacingCalculator.carMoving())
+
+    fun doIMoving(randomNumber : Int){
+        if(randomNumber>RacingParameter.CAR_MOVING_MINIMUM_NUMBER.number)
             position++
     }
 
