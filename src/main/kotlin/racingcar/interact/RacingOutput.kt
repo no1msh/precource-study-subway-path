@@ -25,7 +25,7 @@ object RacingOutput {
         println(RacingMessage.EMPTY)
     }
 
-    fun printwinner(cars: MutableList<Car>) {
+    fun printWinner(cars: MutableList<Car>) {
         print(RacingMessage.RESULT_WINNER)
         for (count: Int in RacingParameter.START_COUNT.number until cars.size) {
             if (count != RacingParameter.START_COUNT.number)

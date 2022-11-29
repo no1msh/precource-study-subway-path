@@ -43,7 +43,7 @@ object RacingManager {
     }
 
     private fun printResult() {
-        RacingOutput.printwinner(RacingCalculator.getWinner(carList))
+        RacingOutput.printWinner(RacingCalculator.getWinner(carList))
     }
 
 }
