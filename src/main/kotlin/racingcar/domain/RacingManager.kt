@@ -13,7 +13,8 @@ object RacingManager {
     fun gameStart() {
         getCars()
         getCount()
-
+        startRacing()
+        printResult()
     }
 
     private fun getCars() {
@@ -28,6 +29,14 @@ object RacingManager {
     private fun getCount() {
         RacingOutput.giveMeCount()
         progressCount = RacingInput.getCount()
+    }
+
+    private fun startRacing(){
+
+    }
+
+    private fun printResult(){
+
     }
 
 }
