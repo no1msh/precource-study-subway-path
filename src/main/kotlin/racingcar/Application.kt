@@ -3,5 +3,9 @@ package racingcar
 import racingcar.domain.RacingManager
 
 fun main() {
-    RacingManager.gameStart()
+    try {
+        RacingManager.gameStart()
+    } catch(error :Exception){
+        println(error.message)
+    }
 }
