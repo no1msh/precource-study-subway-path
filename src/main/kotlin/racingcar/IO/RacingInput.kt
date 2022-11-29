@@ -20,9 +20,15 @@ object RacingInput {
     }
 
     fun getCount(): Int {
-        val count = Console.readLine()
-        ErrorCheck.isItNumber(count)
-        return count.toInt()
+        while (true) {
+            try {
+                val count = Console.readLine()
+                ErrorCheck.isItNumber(count)
+                return count.toInt()
+            } catch (error: IllegalArgumentException) {
+                println(error.message)
+            }
+        }
     }
 
 
