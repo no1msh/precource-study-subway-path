@@ -9,6 +9,8 @@ class Car(private val name: String) {
     }
 
     fun result(): String {
-        return name + " : "+ repeat(position){"-"}
+        var result = "$name : "
+        repeat(position){result += "-"}
+        return result
     }
 }
