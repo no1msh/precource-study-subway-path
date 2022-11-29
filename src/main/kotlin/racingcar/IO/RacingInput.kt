@@ -21,7 +21,7 @@ object RacingInput {
 
     fun getCount(): Int {
         val count = Console.readLine()
-        //예외처리
+        ErrorCheck.isItNumber(count)
         return count.toInt()
     }
 

@@ -11,5 +11,8 @@ object ErrorCheck {
         }
     }
 
+    fun isItNumber(number:String){
+        require(number.toIntOrNull()!=null){RacingMessage.ERROR_COUNT_IS_NOT_NUMBER}
+    }
 
 }
