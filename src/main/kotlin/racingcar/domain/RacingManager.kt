@@ -1,8 +1,8 @@
 package racingcar.domain
 
 import racingcar.Car
-import racingcar.IO.RacingInput
-import racingcar.IO.RacingOutput
+import racingcar.interact.RacingInput
+import racingcar.interact.RacingOutput
 import racingcar.RacingParameter
 import racingcar.calculate.RacingCalculator
 import kotlin.properties.Delegates
@@ -37,7 +37,7 @@ object RacingManager {
             for(number:Int in carList.indices){
                 carList[number].doIMoving()
             }
-            //output으로 결과 출력.
+            RacingOutput.printRacing(carList)
         }
     }
 

@@ -1,4 +1,4 @@
-package racingcar.IO
+package racingcar.interact
 
 import camp.nextstep.edu.missionutils.Console
 import racingcar.errorcheck.ErrorCheck
