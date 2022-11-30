@@ -7,7 +7,7 @@ const val NOT_NUMBER = "숫자여야 합니다."
 object ExceptionHandler {
     fun checkCarName(carNames: List<String>) {
         carNames.forEach {
-            require(it.length >= NAME_RANGE) { NOT_INCLUSIVE_NAME_RANGE }
+            require(it.length <= NAME_RANGE) { NOT_INCLUSIVE_NAME_RANGE }
         }
     }
 

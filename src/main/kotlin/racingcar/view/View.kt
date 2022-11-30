@@ -35,7 +35,7 @@ object View {
     fun viewWinner(winners: List<String>) {
         println(
             buildString {
-                appendLine(WINNER_MESSAGE)
+                append(WINNER_MESSAGE)
                 appendLine(OutputView.printWinner(winners))
             }
         )
@@ -54,6 +54,4 @@ object View {
             }
         }
     }
-
-
 }

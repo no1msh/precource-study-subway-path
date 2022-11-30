@@ -27,5 +27,5 @@ object OutputView {
         }
     }
 
-    fun printWinner(winners :List<String>): String  = winners.joinToString ( ", " )
+    fun printWinner(winners: List<String>): String = winners.joinToString(", ")
 }
