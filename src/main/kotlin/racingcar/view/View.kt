@@ -3,6 +3,7 @@ package racingcar.view
 import racingcar.domain.racing.RacingLog
 import racingcar.view.io.InputView
 import racingcar.view.io.OutputView
+import racingcar.util.repeatIfThrows
 
 object View {
 
@@ -22,20 +23,6 @@ object View {
             tryBlock = InputView::readTryCount,
             catchBlock = OutputView::printError,
         )
-    }
-
-    private inline fun <reified T : Throwable, R> repeatIfThrows(
-        tryBlock: () -> R,
-        catchBlock: (T) -> Any,
-    ): R {
-        while (true) {
-            try {
-                return tryBlock()
-            } catch (t: Throwable) {
-                if (t !is T) throw t
-                catchBlock(t)
-            }
-        }
     }
 
     fun printGameResult() {
