@@ -18,8 +18,6 @@ class Car(private val name: String) {
         }
     }
 
-    fun printPosition() = println("position: $position")
-
     fun pickNumber(): Int = Randoms.pickNumberInRange(START_NUMBER, END_NUMBER)
 
     companion object {
