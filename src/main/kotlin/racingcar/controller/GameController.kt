@@ -9,25 +9,28 @@ class GameController {
     private val carService = CarService()
 
     fun play() {
-        val cars = initialize()
-        gameStart(cars)
+        val carNames = getCarNames()
+        val cars = initCars(carNames)
+        val playCount = getPlayCount()
+        gameStart(cars, playCount)
         gameEnd(cars)
     }
 
-    private fun initialize(): List<Car> {
-        val carNames = view.initView()
+    private fun initCars(carNames: List<String>): List<Car> {
         return carService.makeCars(carNames)
     }
 
-    private fun gameStart(cars: List<Car>): List<Car> {
-        val playCount = view.startView()
+    private fun getCarNames(): List<String> = view.initView()
+
+    private fun gameStart(cars: List<Car>, playCount: Int): List<Car> {
         view.resultView()
         for (i in 0 until playCount) {
             inGame(cars)
-            println()
         }
         return cars
     }
+
+    private fun getPlayCount(): Int = view.startView()
 
     private fun inGame(cars: List<Car>) {
         for (car in cars) {
