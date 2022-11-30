@@ -4,7 +4,7 @@ import racingcar.Car
 
 const val CAR_NAME_MESSAGE = "경주할 자동차 이름을 입력하세요.(이름은 쉼표(,) 기준으로 구분)"
 const val ATTEMPTS_NUMBER_MESSAGE = "시도할 회수는 몇회인가요?"
-
+const val WINNER_MESSAGE = "최종 우승자 : "
 
 object View {
     fun viewCarName(): List<String> {
@@ -26,7 +26,16 @@ object View {
     }
 
     fun viewResult(cars: List<Car>) {
-      println(OutputView.printResult(cars))
+        println(OutputView.printResult(cars))
+    }
+
+    fun viewWinner(winners: List<String>) {
+        println(
+            buildString {
+                appendLine(WINNER_MESSAGE)
+                appendLine(OutputView.printWinner(winners))
+            }
+        )
     }
 
     private inline fun <reified T : Throwable, R> repeatIfThrows(

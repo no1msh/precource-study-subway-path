@@ -9,6 +9,8 @@ class RacingCarController {
         val attemptsNumber = View.viewAttemptsNumber()
         cars.forEach { it.move(attemptsNumber) }
         View.viewResult(cars)
+        val winners = Referee(cars).getWinners()
+        View.viewWinner(winners)
     }
 
 
