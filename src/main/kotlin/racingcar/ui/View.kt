@@ -18,6 +18,7 @@ class View {
 
     fun stepView(car: Car) {
         outputView.printStep(car.getPosition(), car.getName())
+        println()
     }
 
     fun resultView() {
