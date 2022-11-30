@@ -12,7 +12,6 @@ object OutputView {
 
     fun printResult(cars: List<Car>): String {
         return buildString {
-            append(RESULT_MESSAGE)
             cars.forEach {
                 append(it.getCarName())
                 append(" : ")

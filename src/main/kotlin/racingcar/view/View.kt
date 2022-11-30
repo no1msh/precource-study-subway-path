@@ -9,7 +9,6 @@ const val WINNER_MESSAGE = "최종 우승자 : "
 object View {
     fun viewCarName(): List<String> {
         println(CAR_NAME_MESSAGE)
-        InputView.readCarName()
         return repeatIfThrows(
             tryBlock = InputView::readCarName,
             catchBlock = OutputView::printError,
@@ -18,7 +17,6 @@ object View {
 
     fun viewAttemptsNumber(): Int {
         println(ATTEMPTS_NUMBER_MESSAGE)
-        InputView.readAttemptsNumber()
         return repeatIfThrows(
             tryBlock = InputView::readAttemptsNumber,
             catchBlock = OutputView::printError,
@@ -26,7 +24,12 @@ object View {
     }
 
     fun viewResult(cars: List<Car>) {
-        println(OutputView.printResult(cars))
+        println(
+            buildString {
+                append(RESULT_MESSAGE)
+                append(OutputView.printResult(cars))
+            }
+        )
     }
 
     fun viewWinner(winners: List<String>) {
