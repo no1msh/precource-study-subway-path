@@ -1,8 +1,19 @@
 package racingcar
 
+import racingcar.view.RacingRandomNumberGenerator
+
+const val MOVING_MIN_VALUE = 4
 class Car(private val name: String) {
     fun getCarName(): String {
         return name
+    }
+
+    fun move(attemptsNumber: Int) {
+        repeat(attemptsNumber){
+            if(RacingRandomNumberGenerator().generate() >= MOVING_MIN_VALUE){
+                position ++
+            }
+        }
     }
 
     private var position: Int = 0

@@ -7,4 +7,10 @@ object InputView {
         return Console.readLine().split(",")
     }
 
+    fun readAttemptsNumber(): Int {
+        return Console.readLine().toIntOrThrow()
+    }
+
 }
+
+fun String.toIntOrThrow(): Int = requireNotNull(toIntOrNull())
