@@ -1,5 +1,7 @@
 package racingcar
 
+import racingcar.domain.Car
+import racingcar.domain.Referee
 import racingcar.view.View
 
 class RacingCarController {

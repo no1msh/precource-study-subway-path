@@ -1,6 +1,4 @@
-package racingcar
-
-import racingcar.view.RacingRandomNumberGenerator
+package racingcar.domain
 
 const val MOVING_MIN_VALUE = 4
 

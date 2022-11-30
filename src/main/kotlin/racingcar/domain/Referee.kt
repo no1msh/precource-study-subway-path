@@ -1,4 +1,4 @@
-package racingcar
+package racingcar.domain
 
 class Referee(private val cars: List<Car>) {
     fun getWinners(): List<String> {

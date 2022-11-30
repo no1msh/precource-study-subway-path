@@ -1,4 +1,4 @@
-package racingcar
+package racingcar.exceptions
 
 const val NAME_RANGE = 5
 const val NOT_INCLUSIVE_NAME_RANGE = "자동차 이름은 5글자 이하 여야 합니다."

@@ -1,8 +1,8 @@
 package racingcar.view
 
 import camp.nextstep.edu.missionutils.Console
-import racingcar.ExceptionHandler.checkCarName
-import racingcar.ExceptionHandler.toIntOrThrow
+import racingcar.exceptions.ExceptionHandler.checkCarName
+import racingcar.exceptions.ExceptionHandler.toIntOrThrow
 
 object InputView {
     fun readCarName(): List<String> {

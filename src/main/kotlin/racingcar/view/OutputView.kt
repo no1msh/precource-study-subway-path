@@ -1,9 +1,9 @@
 package racingcar.view
 
-import racingcar.Car
+import racingcar.domain.Car
 
 const val ERROR = "[ERROR]"
-const val RESULT_MESSAGE = "실행 결과\n"
+
 
 object OutputView {
     fun printError(e: IllegalArgumentException) {

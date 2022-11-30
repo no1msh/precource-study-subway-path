@@ -1,7 +1,6 @@
-package racingcar.view
+package racingcar.domain
 
 import camp.nextstep.edu.missionutils.Randoms
-import racingcar.RacingNumberGenerator
 
 class RacingRandomNumberGenerator : RacingNumberGenerator {
 
