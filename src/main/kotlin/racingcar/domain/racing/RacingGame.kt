@@ -2,28 +2,28 @@ package racingcar.domain.racing
 
 import racingcar.view.View
 
-class RacingGame {
+class RacingGame(private val view: View) {
 
     private lateinit var racingTrack: RacingTrack
 
     fun play() {
-        val carNames = View.requestRacingCarNames()
-        val tryCount = View.requestRacingTryCount()
+        val carNames = view.requestRacingCarNames()
+        val tryCount = view.requestRacingTryCount()
 
         racingTrack = RacingTrack.newInstance(carNames)
 
         startGame(tryCount)
 
-        View.printFinalWinners(racingTrack.getFinalWinners())
+        view.printFinalWinners(racingTrack.getFinalWinners())
     }
 
     private fun startGame(tryCount: Int) {
-        View.printGameResult()
+        view.printGameResult()
 
         repeat(tryCount) {
             racingTrack.moveCars()
 
-            View.printRacingLog(racingTrack.getCurrentRacingLog())
+            view.printRacingLog(racingTrack.getCurrentRacingLog())
         }
     }
 

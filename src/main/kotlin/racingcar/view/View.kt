@@ -5,35 +5,39 @@ import racingcar.view.io.InputView
 import racingcar.view.io.OutputView
 import racingcar.util.repeatIfThrows
 
-object View {
+class View(
+    private val inputView: InputView,
+    private val outputView: OutputView,
+) {
 
     fun requestRacingCarNames(): List<String> {
-        OutputView.printInputCarNames()
+        outputView.printInputCarNames()
 
         return repeatIfThrows(
-            tryBlock = InputView::readRacingCarNames,
-            catchBlock = OutputView::printError,
+            tryBlock = inputView::readRacingCarNames,
+            catchBlock = outputView::printError,
         )
     }
 
     fun requestRacingTryCount(): Int {
-        OutputView.printInputTryCount()
+        outputView.printInputTryCount()
 
         return repeatIfThrows(
-            tryBlock = InputView::readTryCount,
-            catchBlock = OutputView::printError,
+            tryBlock = inputView::readTryCount,
+            catchBlock = outputView::printError,
         )
     }
 
     fun printGameResult() {
-        OutputView.printGameResult()
+        outputView.printGameResult()
     }
 
     fun printRacingLog(log: RacingLog) {
-        OutputView.printRacingLog(log)
+        outputView.printRacingLog(log)
     }
 
     fun printFinalWinners(names: List<String>) {
-        OutputView.printFinalWinners(names)
+        outputView.printFinalWinners(names)
     }
+
 }

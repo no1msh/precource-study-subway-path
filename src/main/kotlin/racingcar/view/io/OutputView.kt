@@ -3,9 +3,7 @@ package racingcar.view.io
 import racingcar.domain.racing.RacingLog
 import racingcar.view.strings.Messages
 
-object OutputView {
-
-    private const val ERROR_PREFIX = "[ERROR]"
+class OutputView {
 
     fun printInputCarNames() {
         println(Messages.InputCarNames)
@@ -31,5 +29,9 @@ object OutputView {
 
     fun printError(e: IllegalArgumentException) {
         println("$ERROR_PREFIX ${e.message}")
+    }
+
+    companion object {
+        private const val ERROR_PREFIX = "[ERROR]"
     }
 }

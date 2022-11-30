@@ -3,7 +3,7 @@ package racingcar.view.io
 import camp.nextstep.edu.missionutils.Console
 import racingcar.view.validator.InputValidator
 
-object InputView {
+class InputView {
 
     fun readRacingCarNames(): List<String> {
         val names = Console.readLine()
