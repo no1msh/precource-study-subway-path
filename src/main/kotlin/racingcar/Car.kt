@@ -1,8 +1,12 @@
 package racingcar
 
 class Car(private val name: String) {
+    fun getCarName(): String {
+        return name
+    }
 
     private var position: Int = 0
 
-    // 추가 기능 구현
+
+
 }
