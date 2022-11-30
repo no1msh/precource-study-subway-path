@@ -1,4 +1,4 @@
-package racingcar.domain.random
+package racingcar.model.random
 
 class RandomMoveJudgement(private val generator: RandomGenerator) {
 

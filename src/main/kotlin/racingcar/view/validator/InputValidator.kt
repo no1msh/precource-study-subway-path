@@ -1,8 +1,8 @@
 package racingcar.view.validator
 
-import racingcar.domain.racing.Car
-import racingcar.domain.racing.RacingGame
-import racingcar.domain.racing.RacingTrack
+import racingcar.model.racing.Car
+import racingcar.model.racing.RacingGame
+import racingcar.model.racing.RacingTrack
 import racingcar.util.isUpperOrLower
 import racingcar.util.toIntOrThrow
 import racingcar.view.strings.ErrorMessages

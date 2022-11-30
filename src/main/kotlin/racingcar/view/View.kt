@@ -1,6 +1,6 @@
 package racingcar.view
 
-import racingcar.domain.racing.RacingLog
+import racingcar.model.racing.RacingLog
 import racingcar.view.io.InputView
 import racingcar.view.io.OutputView
 import racingcar.util.repeatIfThrows
@@ -28,12 +28,8 @@ class View(
         )
     }
 
-    fun printGameResult() {
-        outputView.printGameResult()
-    }
-
-    fun printRacingLog(log: RacingLog) {
-        outputView.printRacingLog(log)
+    fun printGameResult(logs: List<RacingLog>) {
+        outputView.printGameResult(logs)
     }
 
     fun printFinalWinners(names: List<String>) {

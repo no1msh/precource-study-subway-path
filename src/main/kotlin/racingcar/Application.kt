@@ -1,13 +1,13 @@
 package racingcar
 
-import racingcar.domain.racing.RacingGame
+import racingcar.controller.RacingGameController
 import racingcar.view.View
 import racingcar.view.io.InputView
 import racingcar.view.io.OutputView
 
 fun main() {
-    val game = RacingGame(createView())
-    game.play()
+    val controller = RacingGameController(createView())
+    controller.execute()
 }
 
 private fun createView(): View {

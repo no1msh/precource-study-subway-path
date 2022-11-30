@@ -1,7 +1,7 @@
-package racingcar.domain.racing
+package racingcar.model.racing
 
-import racingcar.domain.random.RandomMoveJudgement
-import racingcar.domain.random.RandomNumberGenerator
+import racingcar.model.random.RandomMoveJudgement
+import racingcar.model.random.RandomNumberGenerator
 import racingcar.util.maxAll
 
 class RacingTrack(
@@ -9,16 +9,16 @@ class RacingTrack(
     private val judge: RandomMoveJudgement,
 ) {
 
-    fun moveCars() {
-        for (car in cars) {
-            if (judge.isMove()) {
-                car.move()
-            }
-        }
-    }
+    val logs: List<RacingLog> = cars.map { RacingLog(it.getName()) }
 
-    fun getCurrentRacingLog(): RacingLog {
-        return RacingLog.newInstance(cars)
+    fun moveCars() {
+        for (i in cars.indices) {
+            if (judge.isMove()) {
+                cars[i].move()
+            }
+
+            logs[i].add(cars[i].getPosition())
+        }
     }
 
     fun getFinalWinners(): List<String> {

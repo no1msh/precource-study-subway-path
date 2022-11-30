@@ -1,4 +1,4 @@
-package racingcar.domain.racing
+package racingcar.model.racing
 
 import racingcar.util.isUpperOrLower
 
@@ -17,9 +17,11 @@ class Car(private val name: String) : Comparable<Car> {
 
     fun getName(): String = name
 
-    override fun compareTo(other: Car): Int = position - other.position
+    fun getPosition(): Int = position
 
-    override fun toString(): String = "$name : ${(0..position).joinToString(separator = "") { "-" }}"
+    override fun compareTo(other: Car): Int {
+        return position - other.position
+    }
 
     companion object {
         const val NAME_LENGTH_MIN = 1

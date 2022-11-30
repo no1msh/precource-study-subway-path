@@ -1,4 +1,4 @@
-package racingcar.domain.random
+package racingcar.model.random
 
 import camp.nextstep.edu.missionutils.Randoms
 
