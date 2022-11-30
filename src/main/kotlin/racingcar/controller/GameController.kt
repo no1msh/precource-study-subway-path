@@ -1,6 +1,6 @@
 package racingcar.controller
 
-import racingcar.Car
+import racingcar.model.Car
 import racingcar.domain.CarService
 import racingcar.ui.View
 
@@ -23,10 +23,17 @@ class GameController {
         val playCount = view.startView()
         view.resultView()
         for (i in 0 until playCount) {
-            carService.driving(cars)
+            inGame(cars)
             println()
         }
         return cars
+    }
+
+    private fun inGame(cars: List<Car>) {
+        for (car in cars) {
+            carService.driving(car)
+            view.stepView(car)
+        }
     }
 
     private fun gameEnd(cars: List<Car>) {

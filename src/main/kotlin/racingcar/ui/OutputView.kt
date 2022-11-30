@@ -8,6 +8,14 @@ class OutputView {
 
     fun printPlayCount() = println(GameMessages.PLAY_COUNT.toString())
 
+    fun printStep(position: Int, name: String) {
+        var distance = ""
+        for (i in 0 until position) {
+            distance += "-"
+        }
+        println("$name : $distance")
+    }
+
     fun printResult() = println(GameMessages.RESULT.toString())
 
     fun printWinner(winners: List<String>) {

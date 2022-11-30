@@ -1,6 +1,6 @@
 package racingcar.domain
 
-import racingcar.Car
+import racingcar.model.Car
 
 class CarService {
     fun makeCars(carNames: List<String>): List<Car> {
@@ -11,10 +11,7 @@ class CarService {
         return cars
     }
 
-    fun driving(cars: List<Car>) {
-        for (car in cars) {
-            car.drive()
-            car.printResult()
-        }
+    fun driving(car: Car) {
+        car.drive()
     }
 }

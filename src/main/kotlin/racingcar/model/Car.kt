@@ -1,4 +1,4 @@
-package racingcar
+package racingcar.model
 
 import camp.nextstep.edu.missionutils.Randoms
 
@@ -7,6 +7,10 @@ class Car(private val name: String) {
     private var position: Int = 0
 
     // 추가 기능 구현부
+    fun getPosition(): Int = position
+
+    fun getName(): String = name
+
     fun drive() {
         val randomNumber = pickNumber()
         if (randomNumber >= CONDITION) {
@@ -15,14 +19,6 @@ class Car(private val name: String) {
     }
 
     fun printPosition() = println("position: $position")
-
-    fun printResult() {
-        var distance = ""
-        for (i in 0 until position) {
-            distance += "-"
-        }
-        println("$name : $distance")
-    }
 
     fun pickNumber(): Int = Randoms.pickNumberInRange(START_NUMBER, END_NUMBER)
 

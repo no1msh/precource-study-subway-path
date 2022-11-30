@@ -1,5 +1,7 @@
 package racingcar.ui
 
+import racingcar.model.Car
+
 class View {
     private val inputView = InputView()
     private val outputView = OutputView()
@@ -12,6 +14,10 @@ class View {
     fun startView(): Int {
         outputView.printPlayCount()
         return inputView.readPlayCount()
+    }
+
+    fun stepView(car: Car) {
+        outputView.printStep(car.getPosition(), car.getName())
     }
 
     fun resultView() {
