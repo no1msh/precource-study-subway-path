@@ -8,7 +8,7 @@ import org.junit.jupiter.api.Test
 
 internal class ApplicationTest : NsTest() {
     @Test
-    fun 전진_정지() {
+    fun `전진_정지`() {
         Assertions.assertRandomNumberInRangeTest(
             {
                 run("pobi,woni", "1")
@@ -19,7 +19,7 @@ internal class ApplicationTest : NsTest() {
     }
 
     @Test
-    fun 이름에_대한_예외_처리() {
+    fun `이름에_대한_예외_처리`() {
         assertSimpleTest {
             runException("pobi,javaji")
             assertThat(output()).contains(ERROR_MESSAGE)
