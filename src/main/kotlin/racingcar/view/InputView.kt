@@ -3,10 +3,7 @@ package racingcar.view
 import camp.nextstep.edu.missionutils.Console
 
 object InputView {
-    fun inputCars(): List<String> {
-        val userInputCars = Console.readLine()
-        return userInputCars.split(",")
-    }
+    fun inputCars(): String = Console.readLine()
 
     fun inputCount(): String = Console.readLine()
 }
