@@ -7,4 +7,6 @@ object InputView {
         val userInputCars = Console.readLine()
         return userInputCars.split(",")
     }
+
+    fun inputCount(): String = Console.readLine()
 }
