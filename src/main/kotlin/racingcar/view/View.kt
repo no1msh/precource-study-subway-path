@@ -8,7 +8,7 @@ const val WINNER_MESSAGE = "최종 우승자 : "
 const val RESULT_MESSAGE = "실행 결과"
 
 object View {
-    fun viewCarName(): List<String> {
+    fun carName(): List<String> {
         println(CAR_NAME_MESSAGE)
         return repeatIfThrows(
             tryBlock = InputView::readCarName,
@@ -16,7 +16,7 @@ object View {
         )
     }
 
-    fun viewAttemptsNumber(): Int {
+    fun attemptsNumber(): Int {
         println(ATTEMPTS_NUMBER_MESSAGE)
         return repeatIfThrows(
             tryBlock = InputView::readAttemptsNumber,
@@ -24,22 +24,23 @@ object View {
         )
     }
 
-    fun viewResult(cars: List<Car>) {
-        println(
-            buildString {
-                appendLine(RESULT_MESSAGE)
-                append(OutputView.printResult(cars))
-            }
-        )
+    fun result(cars: List<Car>, winners: List<String>) {
+        viewMoveDistance(cars)
+        viewWinner(winners)
     }
 
-    fun viewWinner(winners: List<String>) {
-        println(
-            buildString {
-                append(WINNER_MESSAGE)
-                appendLine(OutputView.printWinner(winners))
-            }
-        )
+    private fun viewMoveDistance(cars: List<Car>) {
+        println(buildString {
+            appendLine(RESULT_MESSAGE)
+            append(OutputView.printResult(cars))
+        })
+    }
+
+    private fun viewWinner(winners: List<String>) {
+        println(buildString {
+            append(WINNER_MESSAGE)
+            appendLine(OutputView.printWinner(winners))
+        })
     }
 
     private inline fun <reified T : Throwable, R> repeatIfThrows(
