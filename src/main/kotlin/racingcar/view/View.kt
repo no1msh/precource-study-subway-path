@@ -15,13 +15,13 @@ object View {
             ValidationUserInput.validateCarNames(carNames)
         } catch (e: Exception) {
             println(e.message)
+            UI.printRequestInputCarName()
             carNames = InputView.inputCars()
         }
         return carNames
     }
 
     fun requestCount(): String {
-        UI.printRequestInputCount()
         var count = ""
         UI.printRequestInputCount()
         try {
@@ -29,6 +29,7 @@ object View {
             ValidationUserInput.validateCount(count)
         } catch (e: Exception) {
             println(e.message)
+            UI.printRequestInputCount()
             count = InputView.inputCount()
         }
         return count

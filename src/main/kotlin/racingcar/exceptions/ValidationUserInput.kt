@@ -12,7 +12,7 @@ object ValidationUserInput {
     }
 
     fun validateCount(count : String) {
-        require(!count.matches("/^[0-9]+\$/".toRegex())){ PREFIX + "숫자로 입력해주세요."}
+        require(count.matches("^\\d*\$".toRegex())){ PREFIX + "숫자로 입력해주세요."}
     }
 
 
