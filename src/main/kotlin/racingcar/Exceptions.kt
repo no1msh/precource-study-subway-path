@@ -31,7 +31,7 @@ class Exceptions {
         return false
     }
 
-    private fun validateInputSize(input: List<String>): Boolean{
+    private fun validateInputSize(input: List<String>): Boolean {
         try {
             require(input.size == input.distinct().size)
         } catch (e: IllegalArgumentException) {
@@ -49,7 +49,7 @@ class Exceptions {
         return false
     }
 
-    private fun validateInputNumber(input: String) :Boolean {
+    private fun validateInputNumber(input: String): Boolean {
         val num = input.toIntOrNull()
         try {
             require(num != null)
@@ -60,7 +60,7 @@ class Exceptions {
         return false
     }
 
-    private fun validateRangeNumber(input: Int) :Boolean {
+    private fun validateRangeNumber(input: Int): Boolean {
         try {
             require(input > 0)
         } catch (e: IllegalArgumentException) {

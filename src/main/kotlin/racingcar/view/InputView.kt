@@ -10,7 +10,7 @@ class InputView {
         var cars: List<String>
         do {
             var input = readLine()
-            input = input.replace(" ","")
+            input = input.replace(" ", "")
             cars = input.split(",")
         } while (exception.validateInputNames(cars))
         return cars
