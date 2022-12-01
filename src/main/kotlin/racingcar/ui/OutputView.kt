@@ -19,6 +19,11 @@ class OutputView {
     fun printResult() = println(GameMessages.RESULT.toString())
 
     fun printWinner(winners: List<String>) {
-        println(winners.joinToString(", ", GameMessages.WINNER.toString()))
+        println(winners.joinToString(SEPARATOR, PREFIX))
+    }
+
+    companion object {
+        private const val SEPARATOR = ", "
+        private val PREFIX = GameMessages.WINNER.toString()
     }
 }
