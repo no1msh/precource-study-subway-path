@@ -1,5 +1,11 @@
 package racingcar
 
+import racingcar.domain.RacingManager
+
 fun main() {
-    TODO("프로그램 구현")
+    try {
+        RacingManager.gameStart()
+    } catch(error :Exception){
+        println(error.message)
+    }
 }
