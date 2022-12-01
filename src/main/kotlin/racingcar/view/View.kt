@@ -19,7 +19,7 @@ object View {
     fun printTotalResult() {
         println()
         UI.printResult()
-        println(totalResult)
+        print(totalResult)
     }
 
     fun addTempResult(cars: List<Car>) {
