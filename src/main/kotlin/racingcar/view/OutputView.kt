@@ -15,6 +15,10 @@ class OutputView {
         println(Messages.ERROR.value + Messages.WRONG_SIZE_NAME.value + Messages.REQUEST_RETRY.value)
     }
 
+    fun printInputSizeError() {
+        println(Messages.ERROR.value + Messages.WRONG_SIZE_CAR.value + Messages.REQUEST_RETRY.value)
+    }
+
     fun printRequestGameCount() {
         println(Messages.REQUEST_GAME_COUNT.value)
     }

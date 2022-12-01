@@ -6,8 +6,18 @@ class Exceptions {
     private val outputView = OutputView()
 
     fun validateInputNames(input: List<String>): Boolean {
-        if (validateInputSize(input) || validateInputDuplicate(input))
+        if (validateCarCount(input) || validateInputSize(input) || validateInputDuplicate(input))
             return true
+        return false
+    }
+
+    private fun validateCarCount(input: List<String>): Boolean {
+        try {
+            require(input.size > 1)
+        } catch (e: IllegalArgumentException) {
+            outputView.printInputSizeError()
+            return true
+        }
         return false
     }
 
@@ -43,7 +53,7 @@ class Exceptions {
         val num = input.toIntOrNull()
         try {
             require(num != null)
-        } catch (e: NumberFormatException) {
+        } catch (e: IllegalArgumentException) {
             outputView.printInputNumberError()
             return true
         }
