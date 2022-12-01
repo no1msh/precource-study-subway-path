@@ -2,7 +2,7 @@ package racingcar.view
 
 enum class Messages(val value: String) {
     START_GAME("경주할 자동차 이름을 입력하세요.(이름은 쉼표(,) 기준으로 구분)"),
-    RESULT("최종 우승자 : "),
+    RESULT("실행결과"),
     ERROR("[ERROR] "),
     RESULT_WINNER("최종 우승자 : "),
     DUPLICATE_NAME("자동차 이름은 중복될 수 없습니다."),
