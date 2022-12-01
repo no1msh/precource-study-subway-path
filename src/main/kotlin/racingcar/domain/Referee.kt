@@ -1,7 +1,7 @@
 package racingcar.domain
 
-class Referee(private val cars: List<Car>) {
-    fun getWinners(): List<String> {
+class Referee() {
+    fun getWinners(cars: List<Car>): List<String> {
         var max = 0
         val winners = mutableListOf<String>()
         cars.forEach {
