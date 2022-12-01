@@ -1,5 +1,6 @@
 package racingcar.view
 
+import racingcar.exceptions.ValidationUserInput
 import racingcar.model.Car
 
 object View {
@@ -7,13 +8,30 @@ object View {
     private var totalResult = StringBuilder()
 
     fun requestCarNames(): String {
+        var carNames = ""
         UI.printRequestInputCarName()
-        return InputView.inputCars()
+        try {
+            carNames = InputView.inputCars()
+            ValidationUserInput.validateCarNames(carNames)
+        } catch (e: Exception) {
+            println(e.message)
+            carNames = InputView.inputCars()
+        }
+        return carNames
     }
 
     fun requestCount(): String {
         UI.printRequestInputCount()
-        return InputView.inputCount()
+        var count = ""
+        UI.printRequestInputCount()
+        try {
+            count = InputView.inputCount()
+            ValidationUserInput.validateCount(count)
+        } catch (e: Exception) {
+            println(e.message)
+            count = InputView.inputCount()
+        }
+        return count
     }
 
     fun printTotalResult() {

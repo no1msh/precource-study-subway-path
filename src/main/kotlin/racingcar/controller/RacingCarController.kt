@@ -8,7 +8,7 @@ object RacingCarController {
 
     lateinit var racing: Racing
     lateinit var carList: List<Car>
-    var maxCount = 0
+    private var maxCount = 0
 
     fun startRacing() {
         initRacing()
@@ -31,7 +31,6 @@ object RacingCarController {
         }
         return carList.toList()
     }
-
 
     private fun race() {
         for (index in 0 until maxCount) {
