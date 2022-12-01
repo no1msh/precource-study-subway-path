@@ -6,13 +6,16 @@ import racingcar.view.View
 
 class RacingCarController {
     fun play() {
-        val carNames = View.viewCarName()
-        val cars = carNames.map { Car(it) }
-        val attemptsNumber = View.viewAttemptsNumber()
+        val cars = createCars()
+        val attemptsNumber = View.attemptsNumber()
         cars.forEach { it.move(attemptsNumber) }
-        View.viewResult(cars)
         val winners = Referee(cars).getWinners()
-        View.viewWinner(winners)
+        View.result(cars, winners)
+    }
+
+    private fun createCars(): List<Car> {
+        val carNames = View.carName()
+        return carNames.map { Car(it) }
     }
 
 
