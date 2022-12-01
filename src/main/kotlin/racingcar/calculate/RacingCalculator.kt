@@ -2,7 +2,7 @@ package racingcar.calculate
 
 import racingcar.Car
 import racingcar.RacingParameter
-import camp.nextstep.edu.missionutils.Randoms
+import camp.nextstep.edu.missionutils.Randoms.pickNumberInRange
 import racingcar.RacingMessage
 
 object RacingCalculator {
@@ -15,7 +15,14 @@ object RacingCalculator {
         return carProgress
     }
 
-    fun progressRandom(cars: MutableList<Car>) : List<Int> = Randoms.pickUniqueNumbersInRange(RacingParameter.RANDOM_NUMBER_MINIMUM.number,RacingParameter.RANDOM_NUMBER_MAXIMUM.number,cars.size)
+    fun progressRandom(cars: MutableList<Car>) : List<Int> {
+        val moving = mutableListOf<Int>()
+        for(count: Int in RacingParameter.START_COUNT.number until cars.size){
+            moving.add(pickNumberInRange(1,9))
+        }
+        return moving.toList()
+        //Randoms.pickUniqueNumbersInRange(RacingParameter.RANDOM_NUMBER_MINIMUM.number,RacingParameter.RANDOM_NUMBER_MAXIMUM.number,cars.size)
+    }
 
     fun carProgress(position: Int): String {
         var progress = RacingMessage.RACING_PROGRESS_STANDARD.toString()

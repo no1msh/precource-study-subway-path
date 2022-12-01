@@ -36,7 +36,7 @@ object RacingManager {
         RacingOutput.printProgressMessage()
         for (count: Int in RacingParameter.START_COUNT.number until progressCount) {
             val moving = RacingCalculator.progressRandom(carList)
-            for (number: Int in carList.indices) {
+            for (number: Int in RacingParameter.START_COUNT.number until carList.size) {
                 carList[number].doIMoving(moving[number])
             }
             RacingOutput.printRacing(carList)
