@@ -44,8 +44,8 @@ class RacingGame {
     private fun moveCars(cars: List<Car>) {
         val n = cars.size
         for (i in 0 until n) {
-            val random = pickNumberInRange(0, 9)
-            if (random >= 4) {
+            val random = pickNumberInRange(RANGE_START, RANGE_END)
+            if (random >= MOVE_STATE) {
                 cars[i].move()
             }
         }
@@ -68,6 +68,12 @@ class RacingGame {
     private fun getGameCount(): Int {
         outputView.printRequestGameCount()
         return inputView.getGameCount()
+    }
+
+    companion object {
+        const val MOVE_STATE = 4
+        const val RANGE_START = 0
+        const val RANGE_END = 9
     }
 
 }

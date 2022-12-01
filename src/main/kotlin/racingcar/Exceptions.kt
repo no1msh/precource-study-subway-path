@@ -13,7 +13,7 @@ class Exceptions {
 
     private fun validateCarCount(input: List<String>): Boolean {
         try {
-            require(input.size > 1)
+            require(input.size > INPUT_SIZE)
         } catch (e: IllegalArgumentException) {
             outputView.printInputSizeError()
             return true
@@ -23,7 +23,7 @@ class Exceptions {
 
     private fun validateInputDuplicate(input: List<String>): Boolean {
         try {
-            require(input.all { it.length <= 5 })
+            require(input.all { it.length <= INPUT_LENGTH })
         } catch (e: IllegalArgumentException) {
             outputView.printInputLengthError()
             return true
@@ -62,7 +62,7 @@ class Exceptions {
 
     private fun validateRangeNumber(input: Int): Boolean {
         try {
-            require(input > 0)
+            require(input >= INPUT_SIZE)
         } catch (e: IllegalArgumentException) {
             outputView.printInputRangeError()
             return true
@@ -70,4 +70,8 @@ class Exceptions {
         return false
     }
 
+    companion object {
+        const val INPUT_LENGTH = 5
+        const val INPUT_SIZE = 1
+    }
 }
