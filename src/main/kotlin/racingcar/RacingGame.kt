@@ -36,6 +36,7 @@ class RacingGame {
         for (i in 0 until gameCount) {
             moveCars(cars)
             outputView.printResultCars(cars)
+            Thread.sleep(800)
         }
     }
 
