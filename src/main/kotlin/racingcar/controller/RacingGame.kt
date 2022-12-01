@@ -1,6 +1,7 @@
-package racingcar
+package racingcar.controller
 
 import camp.nextstep.edu.missionutils.Randoms.pickNumberInRange
+import racingcar.model.Car
 import racingcar.view.InputView
 import racingcar.view.OutputView
 
