@@ -33,11 +33,17 @@ class OutputView {
         for (car in cars) {
             println(car.result())
         }
+        println()
+    }
+
+    fun printWinner(winner: List<String>) {
+        println(RESULT_WINNER_MESSAGE + winner.joinToString(", "))
     }
 
     companion object {
         const val ERROR_MESSAGE = "[ERROR] "
         const val RESULT_MESSAGE = "실행 결과"
+        const val RESULT_WINNER_MESSAGE = "최종 우승자 : "
         const val DUPLICATE_NAME_MESSAGE = "자동차 이름은 중복될 수 없습니다."
         const val WRONG_SIZE_NAME_MESSAGE = "자동차 이름은 5글자 이하여야 합니다."
         const val REQUEST_RETRY_MESSAGE = " 다시 입력해주세요."

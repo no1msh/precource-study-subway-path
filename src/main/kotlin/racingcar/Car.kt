@@ -8,6 +8,14 @@ class Car(private val name: String) {
         position += 1
     }
 
+    fun getName(): String {
+        return name
+    }
+
+    fun getPosition(): Int {
+        return position
+    }
+
     fun result(): String {
         var result = "$name : "
         repeat(position){result += "-"}

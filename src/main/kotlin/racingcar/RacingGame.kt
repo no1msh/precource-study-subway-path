@@ -10,6 +10,23 @@ class RacingGame {
         val cars = getCarNames()
         val gameCount = getGameCount()
         playGame(cars, gameCount)
+        val winner = getWinner(cars)
+        outputView.printWinner(winner)
+    }
+
+    private fun getWinner(cars: List<Car>): List<String> {
+        val score = mutableListOf<Int>()
+        val winner = mutableListOf<String>()
+        for (car in cars) {
+            score.add(car.getPosition())
+        }
+        val maxScore = score.maxOf { it }
+        for (car in cars) {
+            if (car.getPosition() == maxScore) {
+                winner.add(car.getName())
+            }
+        }
+        return winner
     }
 
     private fun playGame(cars: List<Car>, gameCount: Int) {
