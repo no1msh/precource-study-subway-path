@@ -1,5 +1,7 @@
 package racingcar
 
+import racingcar.view.OutputView
+
 class Exceptions {
     private val outputView = OutputView()
 

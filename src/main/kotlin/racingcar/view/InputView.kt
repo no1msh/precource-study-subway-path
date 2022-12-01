@@ -1,6 +1,7 @@
-package racingcar
+package racingcar.view
 
 import camp.nextstep.edu.missionutils.Console.readLine
+import racingcar.Exceptions
 
 class InputView {
     private val exception = Exceptions()

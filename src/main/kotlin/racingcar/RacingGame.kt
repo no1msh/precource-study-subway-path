@@ -1,6 +1,8 @@
 package racingcar
 
 import camp.nextstep.edu.missionutils.Randoms.pickNumberInRange
+import racingcar.view.InputView
+import racingcar.view.OutputView
 
 class RacingGame {
     private val inputView = InputView()
