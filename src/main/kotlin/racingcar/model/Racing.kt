@@ -20,6 +20,16 @@ class Racing(private val cars: List<Car>) {
         }
     }
 
+    fun getWinners(maxCount: Int): List<String> {
+        val winners = mutableListOf<String>()
+        for (car in this.cars) {
+            if (car.getPosition() == maxCount) {
+                winners.add(car.getName())
+            }
+        }
+        return winners.toList()
+    }
+
     companion object {
         const val START_RANGE = 0
         const val END_RANGE = 9

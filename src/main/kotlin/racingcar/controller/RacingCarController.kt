@@ -41,16 +41,6 @@ object RacingCarController {
     }
 
     private fun raceEnd() {
-        View.printWinner(getWinners())
-    }
-
-    private fun getWinners(): List<String> {
-        val winners = mutableListOf<String>()
-        for (car in carList) {
-            if (car.getPosition() == maxCount) {
-                winners.add(car.getName())
-            }
-        }
-        return winners.toList()
+        View.printWinner(racing.getWinners(maxCount))
     }
 }
