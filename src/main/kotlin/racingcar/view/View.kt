@@ -8,7 +8,7 @@ object View {
     private var totalResult = StringBuilder()
 
     fun requestCarNames(): String {
-        var carNames = ""
+        var carNames: String
         UI.printRequestInputCarName()
         try {
             carNames = InputView.inputCars()
@@ -22,7 +22,7 @@ object View {
     }
 
     fun requestCount(): String {
-        var count = ""
+        var count: String
         UI.printRequestInputCount()
         try {
             count = InputView.inputCount()
