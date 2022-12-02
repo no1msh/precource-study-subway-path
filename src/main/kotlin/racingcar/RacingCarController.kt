@@ -16,7 +16,8 @@ class RacingCarController {
         val carNames = View.carName()
         return carNames.map { Car(it) }
     }
-    private fun moveAllCar(cars :List<Car>){
+
+    private fun moveAllCar(cars: List<Car>) {
         val attemptsNumber = View.attemptsNumber()
         cars.forEach { it.move(attemptsNumber) }
     }

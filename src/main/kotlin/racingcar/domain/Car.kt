@@ -9,11 +9,12 @@ class Car(private val name: String) {
 
     fun move(attemptsNumber: Int) {
         repeat(attemptsNumber) {
-            if(isMove()) {
+            if (isMove()) {
                 position++
             }
         }
     }
+
     private fun isMove() = (RacingRandomNumberGenerator().generate() >= MOVING_MIN_VALUE)
 
     fun getPosition(): Int {
