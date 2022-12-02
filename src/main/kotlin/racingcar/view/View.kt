@@ -8,29 +8,27 @@ object View {
     private var totalResult = StringBuilder()
 
     fun requestCarNames(): String {
-        var carNames: String
+        var carNames = ""
         UI.printRequestInputCarName()
         try {
             carNames = InputView.inputCars()
             ValidationUserInput.validateCarNames(carNames)
         } catch (e: Exception) {
             println(e.message)
-            UI.printRequestInputCarName()
-            carNames = InputView.inputCars()
+            return requestCarNames()
         }
         return carNames
     }
 
     fun requestCount(): String {
-        var count: String
+        var count = ""
         UI.printRequestInputCount()
         try {
             count = InputView.inputCount()
             ValidationUserInput.validateCount(count)
         } catch (e: Exception) {
             println(e.message)
-            UI.printRequestInputCount()
-            count = InputView.inputCount()
+            return requestCount()
         }
         return count
     }
