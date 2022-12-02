@@ -11,6 +11,8 @@ class Exceptions {
         return false
     }
 
+    // outputView 처리
+    // validate인데 error인 경우 true
     private fun validateCarCount(input: List<String>): Boolean {
         try {
             require(input.size > INPUT_SIZE)
