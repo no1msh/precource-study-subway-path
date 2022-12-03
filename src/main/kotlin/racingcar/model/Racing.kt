@@ -4,20 +4,17 @@ import camp.nextstep.edu.missionutils.Randoms
 
 class Racing(private val cars: List<Car>) {
 
-    private fun canMove(): Boolean {
-        val randomValue = Randoms.pickNumberInRange(START_RANGE, END_RANGE)
-        if (randomValue >= CUT_OFF) {
-            return true
-        }
-        return false
-    }
-
     fun raceOnce() {
         for (car in this.cars) {
             if (canMove()) {
                 car.move()
             }
         }
+    }
+
+    private fun canMove(): Boolean {
+        val randomValue = Randoms.pickNumberInRange(START_RANGE, END_RANGE)
+        return (randomValue >= CUT_OFF)
     }
 
     fun getWinners(maxCount: Int): List<String> {
