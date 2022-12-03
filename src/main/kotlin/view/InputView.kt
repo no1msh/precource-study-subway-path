@@ -4,12 +4,12 @@ import camp.nextstep.edu.missionutils.Console
 import service.ExceptionHandler
 
 class InputView {
-    fun requireCarNames(): String {
+    fun requireCarNames(): List<String> {
         val carNames = Console.readLine()
         ExceptionHandler.checkNames(carNames)
         val names = carNames.split(",")
         isValidLength(names)
-        return carNames
+        return names
     }
 
     fun isValidLength(names: List<String>){
