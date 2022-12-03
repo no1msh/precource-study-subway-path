@@ -34,7 +34,7 @@ class CarManager {
     /**
      * 우승자 확인
      */
-    fun confirmFirstPlayer(): MutableList<String> {
+    fun confirmWinners(): MutableList<String> {
         var firstPlayers = mutableListOf<String>()
         for (car in cars) {
             if (car.getCurrentPosition() == tryCnt) {
@@ -52,4 +52,5 @@ class CarManager {
             car.move()
         }
     }
+
 }
