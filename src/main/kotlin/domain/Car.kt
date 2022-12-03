@@ -23,6 +23,13 @@ class Car(private val name: String) {
         return this.position
     }
 
+    /**
+     * 이름 반환
+     */
+    fun getName(): String {
+        return this.name
+    }
+
     enum class Condition(val value: Int) {
         STANDARD(4)
     }
