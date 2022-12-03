@@ -3,11 +3,11 @@ package view
 import service.Message
 
 class OutputView {
-    private fun requireCarNames(){
-        println(Message.REQUIRE_CAR_NAME)
+    fun requireCarNames(){
+        println(Message.REQUIRE_CAR_NAME.toString())
     }
 
-    private fun requireTry(){
-        println(Message.REQUIRE_TRY)
+    fun requireTry(){
+        println(Message.REQUIRE_TRY.toString())
     }
 }
