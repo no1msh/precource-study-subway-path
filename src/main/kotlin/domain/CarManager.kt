@@ -51,6 +51,6 @@ class CarManager {
         for (car in cars) {
             car.move()
         }
+        view.printResult(cars)
     }
-
 }
