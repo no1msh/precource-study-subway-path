@@ -31,5 +31,25 @@ class CarManager {
         cars.add(Car(name))
     }
 
+    /**
+     * 우승자 확인
+     */
+    fun confirmFirstPlayer(): MutableList<String> {
+        var firstPlayers = mutableListOf<String>()
+        for (car in cars) {
+            if (car.getCurrentPosition() == tryCnt) {
+                firstPlayers.add(car.getName())
+            }
+        }
+        return firstPlayers
+    }
 
+    /**
+     * 자동차별로 무작위 숫자를 뽑고 조건 이상인 경우 전진
+     */
+    fun nextStep() {
+        for (car in cars) {
+            car.move()
+        }
+    }
 }
