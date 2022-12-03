@@ -10,11 +10,18 @@ class CarManager {
     /**
      * 사용자에게 이름을 입력받고 자동차 생성
      */
-    fun makeCars() {
+    fun getNamesAndMakeCars() {
         val carNames = view.requireCarNames()
         for (name in carNames) {
             makeCar(name)
         }
+    }
+
+    /**
+     * 시도 횟수 입력
+     */
+    fun getTryCnt() {
+        tryCnt = view.requireTryCnt()
     }
 
     /**
