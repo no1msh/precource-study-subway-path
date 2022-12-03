@@ -20,11 +20,11 @@ object ExceptionHandler {
      * 이름의 길이가 5자 이하인지 확인
      */
     fun checkNameLength(name: String) {
-        try{
-            require(name.length <= 5){
+        try {
+            require(name.length <= 5) {
                 Message.ERROR.toString()
             }
-        }catch (e:IllegalArgumentException){
+        } catch (e: IllegalArgumentException) {
             println(e.message)
         }
     }
