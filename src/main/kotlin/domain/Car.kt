@@ -16,6 +16,13 @@ class Car(private val name: String) {
         }
     }
 
+    /**
+     * 현재 위치 반환
+     */
+    fun getCurrentPosition(): Int {
+        return this.position
+    }
+
     enum class Condition(val value: Int) {
         STANDARD(4)
     }
