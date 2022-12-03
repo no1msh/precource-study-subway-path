@@ -16,9 +16,9 @@ class View {
         return inputView.requireTryCnt()
     }
 
-    fun printResult(cars: List<Car>) {
+    fun printStep(cars: List<Car>) {
         for(car in cars){
-            outputView.printResult(car)
+            outputView.printStep(car)
         }
         println()
     }
