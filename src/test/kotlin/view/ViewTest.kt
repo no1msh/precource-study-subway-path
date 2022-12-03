@@ -8,26 +8,42 @@ import racingcar.main
 import service.Message
 
 internal class ViewTest : NsTest(){
+//    @Test
+//    fun `입력 테스트1`(){
+//        assertSimpleTest{
+//            run("pobi,test,jun")
+//            assertThat(output().contains("pobi"))
+//        }
+//    }
+//
+//    @Test
+//    fun `입력 테스트2`(){
+//        assertSimpleTest{
+//            run("pobi.test,jun")
+//            assertThat(output().contains(Message.ERROR.toString()))
+//        }
+//    }
+//
+//    @Test
+//    fun `입력 테스트3`(){
+//        assertSimpleTest{
+//            run("pobi,testtest,jun")
+//            assertThat(output().contains(Message.ERROR.toString()))
+//        }
+//    }
+
     @Test
-    fun `입력 테스트1`(){
+    fun `회수 입력 테스트1`(){
         assertSimpleTest{
-            run("pobi,test,jun")
-            assertThat(output().contains("pobi"))
+            run("3")
+            assertThat(output().contains("3"))
         }
     }
 
     @Test
-    fun `입력 테스트2`(){
+    fun `회수 입력 테스트2`(){
         assertSimpleTest{
-            run("pobi.test,jun")
-            assertThat(output().contains(Message.ERROR.toString()))
-        }
-    }
-
-    @Test
-    fun `입력 테스트3`(){
-        assertSimpleTest{
-            run("pobi,testtest,jun")
+            runException("q")
             assertThat(output().contains(Message.ERROR.toString()))
         }
     }
