@@ -7,7 +7,7 @@ import racingcar.view.View
 object RacingCarController {
 
     lateinit var racing: Racing
-    lateinit var carList: List<Car>
+    lateinit var cars: List<Car>
     private var maxCount = 0
 
     fun startRacing() {
@@ -17,10 +17,10 @@ object RacingCarController {
     }
 
     private fun initRacing() {
-        val cars = View.requestCarNames()
-        this.carList = initCars(cars)
+        val carNames = View.requestCarNames()
+        this.cars = initCars(carNames)
         this.maxCount = View.requestCount().toInt()
-        this.racing = Racing(carList)
+        this.racing = Racing(cars)
     }
 
     private fun initCars(carNames: String): List<Car> {
@@ -35,7 +35,7 @@ object RacingCarController {
     private fun race() {
         for (index in 0 until maxCount) {
             racing.raceOnce()
-            View.addTempResult(carList)
+            View.addTempResult(cars)
         }
         View.printTotalResult()
     }
