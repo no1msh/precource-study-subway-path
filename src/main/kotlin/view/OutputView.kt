@@ -12,8 +12,13 @@ class OutputView {
         println(Message.REQUIRE_TRY.toString())
     }
 
-    fun printResult(car: Car) {
+    fun printStep(car: Car) {
         print(car.getName() + " : ")
         println("-".repeat(car.getCurrentPosition()))
+    }
+
+    fun printResult(winners: List<String>) {
+        print(Message.RESULT.toString())
+        println(winners.toString().subSequence(1,winners.toString().length-1))
     }
 }
