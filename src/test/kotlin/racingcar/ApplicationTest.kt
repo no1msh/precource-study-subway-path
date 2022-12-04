@@ -8,13 +8,24 @@ import org.junit.jupiter.api.Test
 
 internal class ApplicationTest : NsTest() {
     @Test
-    fun 전진_정지() {
+    fun `전진_정지`() {
         Assertions.assertRandomNumberInRangeTest(
             {
                 run("pobi,woni", "1")
                 assertThat(output()).contains("pobi : -", "woni : ", "최종 우승자 : pobi")
             },
             MOVING_FORWARD, STOP
+        )
+    }
+
+    @Test
+    fun `동점자가 존재하는 경우 테스트`() {
+        Assertions.assertRandomNumberInRangeTest(
+            {
+                run("pobi,woni,yerin", "1")
+                assertThat(output()).contains("pobi : -", "woni : ", "yerin : -", "최종 우승자 : pobi, yerin")
+            },
+            MOVING_FORWARD, STOP, MOVING_FORWARD
         )
     }
 
