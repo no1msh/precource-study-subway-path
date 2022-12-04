@@ -22,4 +22,8 @@ class View {
         }
         println()
     }
+
+    fun printResult(winners: List<String>){
+        outputView.printResult(winners)
+    }
 }
